@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+The Zoo
+{% endblock %}
+
+{% block content %}
+
+<table style="width: 100%;">
+    <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Leader?</th>
+        <th>In Madagascar?</th>
+    </tr>
+    {% for animal in animals %}
+    <tr>
+        <td>{{animal['name']}}</td>
+        <td>{{animal['species']}}</td>
+        <td>{{animal['leader']}}</td>
+        <td>{{animal['in_madagascar']}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
